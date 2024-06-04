@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: shier-tb_user-center
+  datasource:
+    url: jdbc:mysql://rm-cn-jte3ov1e40003xyo.rwlb.rds.aliyuncs.com:3306/db_greenhouse?useSSL=false
+    username: root
+    password: Huang156048846!
+#    url: jdbc:mysql://localhost:3307/db_greenhouse_v1
+#    username: root
+#    password: 123456
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  profiles:
+    active: dev
+  session:
+    timeout: 86400
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+server:
+  port: 8102
+  servlet:
+    context-path: /api
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+#aliyun:
+#  oss:
+#    file:
+#      endpoint: xxxx
+#      keyid: xxxx
+#      keysecret: xxxx
+#      bucketname: xxxx
+
+accessKey: z82ludu6wn79rfv0zxhc7zaul4bmcwea
+secretKey: zgtytyo1akvb2fg7ldze5dowzv5gmdx0
